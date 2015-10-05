@@ -4,6 +4,7 @@ classdef RrtNode < handle
         parent
         edges
         children
+        cost
     end
     
     methods
@@ -12,6 +13,7 @@ classdef RrtNode < handle
             self.parent = parent;
             self.edges = [];
             self.children = [];
+            self.cost = 0;
         end
     
     end

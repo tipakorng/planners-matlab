@@ -49,7 +49,7 @@ disp(num_successes);
 %% Test point insertion
 distance = @(x, y)norm(x-y, 2);
 dim = 2;
-num_points = 10;
+num_points = 100;
 kd_tree = KDTree(2, 1, distance);
 num_successes = 0;
 
@@ -66,3 +66,8 @@ end
 
 disp('Number of successes = ');
 disp(num_successes);
+
+%% Test ball query
+q = [0.5, 0.5];
+radius = 1;
+value = kd_tree.query_ball(q, radius);
